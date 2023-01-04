@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content" class="content">
+        <h1 id="title"></h1>
+        <p id="description"></p>
+    </div>
+
+    <ul id="menu1">
+        <li id="first">first</li>
+        <li id="second">second</li>
+        <li id="third">third</li>
+    </ul>
+
+    <ul id="menu2">
+        <li>Ryan</li>
+        <li>Agung</li>
+        <li>Samudra</li>
+    </ul>
+
+    <script>
+        // // https://developer.mozilla.org/en-US/docs/Web/API/Element
+
+        // const title = document.getElementById("title")
+        // title.textContent = "Ini judul brow"
+
+        // const description = document.getElementById("description")
+        // description.textContent = "Ini deskripsi brow"
+
+        // // Untuk mengecek tipe data atau properti dari element
+        // console.log(content.id)
+        // console.log(content.className)
+        // console.log(content.tagName)
+
+        // // Untuk menghapus element dari parent
+        // title.remove()
+        // description.remove()
+
+        // // Untuk menambah elemen dan juga isinya ke dalam html
+        // const content = document.getElementById("content")
+
+        // const firstTitle = document.createElement("h1")
+        // firstTitle.textContent = "Ryan Agung Samudra"
+        // content.appendChild(firstTitle)
+
+        // const secondTitle = document.createElement("h2")
+        // secondTitle.textContent = "Ini adalah second title brow"
+        // content.appendChild(secondTitle)
+
+        // const thirdTitle = document.createElement("h3")
+        // thirdTitle.textContent = "Ini adalah third title brow"
+        // content.appendChild(thirdTitle)
+
+        // const paragraph = document.createElement("p")
+        // paragraph.textContent = "Ini adalah paragraf dari content ya guys ya"
+        // content.appendChild(paragraph)
+
+        // // nodelist, saat menggunakan querySelectorAll maka nodelist bersifat static, dan ketika menggunakan element.childNodes maka nodelist bersifat live
+        // const list = document.querySelectorAll("li") 
+        // console.info(list)
+
+        // const menu1 = document.getElementById("menu1").childNodes
+        // console.info(menu1)
+
+        // const menu2 = document.getElementById("menu2").childNodes
+        // console.info(menu2)
+
+
+        // // NODE LIST LIVE
+        // const menu1 = document.getElementById("menu1")
+        //     // append() => untuk menggabungkan lebih dari satu elemen. appendChild() => untuk menggabungkan hanya satu element
+        // menu1.append(document.createElement("li"), document.createElement("li"))
+        // menu1.appendChild(document.createElement("li"))
+
+        // console.log(menu1.childNodes)
+
+
+        // NODE LIST STATIC, ketika menggunakan querySelectorALL maka tidak bisa diubah elementnya, kecuali menggunakan childNodes
+        let list = document.querySelectorAll("li")
+        const menu1 = document.getElementById("menu1")
+
+        menu1.append(document.createElement("li"), document.createElement("li"))
+        console.info(list)
+            // Untuk melakukan perubahan pada node list static, maka lakukan query ulang, dan pastikan variabel dari querySelectorAll = let. Seperti dibawah ini :
+        list = document.querySelectorAll("li")
+        console.info(list)
+    </script>
+</body>
+</html>

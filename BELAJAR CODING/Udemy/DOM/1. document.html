@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+    </ul>
+
+    <script>
+        // console.info(document)
+        // console.info(document.title)
+        // console.info(document.head)
+        // console.info(document.body)
+        // console.info(document.images)
+        // console.info(document.contentType)
+
+        const menu = document.getElementById("menu")
+        // console.info(menu)
+        console.info(menu.childNodes)
+
+        const second = document.getElementById("second")
+        // console.info(second)
+        console.info(second.textContent)
+        console.info(second.previousSibling.previousSibling.textContent)
+        console.info(second.nextSibling.nextSibling)
+
+        // Document method
+        // sebelumnya harus get element by id/class dulu
+        menu.removeChild(document.getElementById("first"))
+
+        // untuk menambahkan kata pada list
+        const node = document.createElement("li")
+        node.appendChild(document.createTextNode("yeah"))
+        document.getElementById("menu").appendChild(node)
+    </script>
+</body>
+</html>

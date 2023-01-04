@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textNode</title>
+</head>
+<body>
+    Ryan Agung Samudra
+    <script>
+        // Text node adalah salah satu turunan dari node, dimana text node ini merupakan semua text pada html yang tidak dibungkus didalam tag
+
+        const text = document.body.firstChild
+        console.info(text.wholeText)
+
+        const text2 = document.createTextNode("YANTO NICH!!")
+        document.body.append(text2)
+    </script>
+</body>
+</html>

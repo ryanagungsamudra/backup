@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+</head>
+<body>
+    <p>This is text</p>
+
+    <ul>
+        <li class="menuItem">first</li>
+        <li id="menu2">second</li>
+        <li class="menuItem">third</li>
+    </ul>
+    <ul>
+        <li>fourth</li>
+        <li class="menuItem">fifth</li>
+    </ul>
+
+    <div class="ryan">ryan</div>
+    <div class="ryan agung">agung</div>
+    <div class="ryan samudra">samudra</div>
+    <div class="agung samudra">samudra</div>
+
+    <script>
+        // class selector
+        const elements = document.querySelectorAll("*")
+        console.info(elements)
+
+        const menuItems = document.querySelectorAll(".menuItem")
+        console.info(menuItems)
+
+        // id selector
+        const menu2 = document.querySelectorAll("#menu2")
+        console.info(menu2)
+
+        // Attribute selector
+        const name = document.querySelectorAll("[class]")
+        console.info(name)
+            // berikut untuk seleksi pada atribute dengan menggunakan pola dimana akan menyeleksi semua attribute yang memiliki class dimana terdapat value = ryan, di awal kata.
+        const elementsName = document.querySelectorAll("[class^='ryan']")
+        console.info(elementsName)
+            // berikut untuk menyeleksi semua attribute class yang memiliki value = agung, di posisi manapun(tidak harus diawal atau akhir kalimat).
+        console.info(document.querySelectorAll("[class*='agung']"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Text n Inner HTML</title>
+</head>
+<body>
+    <p id="content">
+        <script>
+            console.info("Hellow Brads!")
+        </script>
+        <b>Ryan</b> Agung <i>Samudra</i>
+    </p>
+
+    <div id="content2"></div>
+
+    <script>
+        const content = document.getElementById("content")
+        console.info(content.textContent) // Mengambil semua text dalam element
+        console.info(content.innerText) // Mengambil semua text yang hanya akan tampil di laman HTML
+        console.info(content.innerHTML) // Mengambil semua elemen termasuk text pada HTML
+
+        // MENAMBAHKAN TEXT KE HTML
+        const content2 = document.getElementById("content2")
+        content2.innerHTML =  "<h1>BELAJAR JS INNER HTML</h1><p>Selamat belajar bradss!</p>"
+
+        // Jika menggunakan textContent dan juga innerText untuk menambahkan text ke html maka tag elemennya juga akan tampil, oleh karena itu disarankan menggunakan inner HTML
+        // content2.textContent =  "<h1>BELAJAR JS INNER HTML</h1><p>Selamat belajar bradss!</p>"
+        // content2.innerText = "<h1>BELAJAR JS INNER HTML</h1><p>Selamat belajar bradss!</p>"
+
+    </script>
+</body>
+</html>

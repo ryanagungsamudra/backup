@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body>
+    <input id="clickMe" type="button" value="clickMe">
+    <input id="clickMe2" type="button" value="clickMe">
+
+    <script>2
+    //Perbedaannya yakni event target bisa di callback berulang kali, sementara global event handler hanya bisa sekali dan tidak bisa di call back berulang kali.
+
+        // Event target, digunakan untuk mengubah keadaan menjadi yang diinginkan
+        const button = document.getElementById("clickMe")
+        button.addEventListener("click", function(){
+            button.setAttribute("value", "You Already Click Me!")
+        })
+        button.addEventListener("click", function () {
+            console.log("button di click!")
+        })
+
+        // Global Event Handler, 
+        const button2 = document.getElementById("clickMe2")
+        button2.onclick = function(){
+            button2.setAttribute("value", "You click me again?")
+        }
+        button2.onclick = function () {
+            console.log("value", "You click me again?")
+        }
+    </script>
+</body>
+</html> 

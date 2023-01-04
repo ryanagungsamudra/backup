@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img id="bg" src="../../FAZZTRACK/Seleksi Fazztrack/Level 2/background.jpg" alt="background"> -->
+
+    <img id="logo" src="" alt="">
+
+    <script>
+        // const bg = document.getElementById("bg")
+
+        // const src = bg.getAttributeNode("src")
+        // // atau
+        // const src2 = bg.getAttribute("src")
+        // console.info(src.name)
+        // console.info(src.value)
+        // console.info(src2)
+        
+        // const alt = bg.getAttributeNode("alt")
+        // // atau
+        // const alt2 = bg.getAttribute("alt")
+        // console.info(alt.name)
+        // console.info(alt.value)
+        // console.info(alt2)
+
+    // MEMBUAT ATTR
+        // cara 1 = traditional
+        const logo = document.getElementById("logo")
+
+        const src = document.createAttribute("src")
+        src.value = "../../FAZZTRACK/Seleksi Fazztrack/Level 2/background.jpg"
+        logo.setAttributeNode(src)
+        // cara 2 = modern
+        // disini seharusnya tetap getElemen dulu, tapi karna sudah diambil diatas maka langsung saja
+        logo.setAttribute("alt", "background")
+
+    </script>
+</body>
+</html>

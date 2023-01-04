@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio&Video</title>
+    <style>
+        body, h1 {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* background-color: rgba(0,0,0,0.3); */
+            background-image: linear-gradient(to right, rgba(37, 197, 157, 0.3), rgb(89, 104, 89, 0.3));
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 4em;
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            min-height: 100%;
+            min-width: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- AUDIO -->
+
+    <!-- <audio src="Audio/InTheForest.mp3" controls></audio>
+    
+    <figure>
+        <figcaption>
+        In The Forest-Audio No Copy Right
+        </figcaption>
+        <audio controls loop>
+            <source src="Audio/InTheForest.mp3" type="audio/mpeg">
+            <source src="Audio/InTheForest.mp3" type="audio/mpeg">
+        </audio>
+    </figure> -->
+
+<!-- VIDEO -->
+
+    <!-- <video src="../3. Video/g.mp4" width="400" height="250" controls></video> -->
+
+    <!-- Berikut cocok untuk membuat background video untuk laman web -->
+
+    <!-- <figure>
+        <figcaption>
+            Berikut adalah video cewe minum kopi bro
+        </figcaption>
+        <video width="400" height="250" poster="../image.jpg" loop autoplay muted>
+            <source src="../3. Video/g.webm" type="video/webm">
+            <source src="../3. Video/g.mp4" type="video/mp4">
+            Browser tidak mendukung tag <code>video</code> 
+        </video>
+    </figure> -->
+
+    <!-- Berikut kalau mau membuat background laman web dengan video fullscreen dan dengan efek transparansi -->
+
+    <!-- <div class="hero">
+        <h1>Welcome to My Web</h1>
+        <video class="video-bg" src="video/motion.mp4" autoplay muted loop></video>
+    </div> -->
+
+    <!-- Berikut adalah cara input video kedalam webpage dengan menambahkan subtitle yang diinginkan. Untuk format subtitle sendiri adalah vtt, dan kriteria nya seperti terlihat pada file .vtt -->
+    <video controls width="500" height="500">
+        <source src="../3. Video/Kenapa Orang Miskin dan Kaya Susah Punya Pasangan Dating Series.mp4 Orang Miskin dan Kaya Susah Punya Pasangan Dating Series.mp4" type="video/mp4">
+        <track src="../3. Video/subtitleID.vtt" kind="captions" title="Bahasa" srclang="Indonesia">
+        <track src="../3. Video/subtitleEN.vtt" kind="captions" title="Bahasa" srclang="English">
+    </video>
+
+    <!-- berikut untuk memasukkan video dari web seperti youtube, gampang tinggal copas embed link videonya -->
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/XhCVD7Vs2LE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     -->
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/XhCVD7Vs2LE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

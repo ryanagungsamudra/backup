@@ -1,0 +1,27 @@
+DOKUMENTASI LENGKAP NYA ADA DISINI :
+https://tailwindcss.com/docs/installation
+
+
+1. pada terminal, npm init -y
+2. npm install -D tailwindcss
+3. npx tailwindcss init
+4. pada tailwind.config.js di key content => ["./public/**/*.{html,js}"]
+5. tambahkan folder public => index.html dan folder css => style.css
+6. tambahkan folder src => folder css => input.css
+7. pada file input.css tambahkan :
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+8. pada terminal run => npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch
+9. pada html diatas tag head tambahkan  <link href="/public/css/style.css" rel="stylesheet">
+10. diakhir untuk optimasi dari style.css nya agar berjalan optimal dan memeprkecil ukuran css, jalankan di terminal
+	=> npx tailwindcss -o ./public/css/final.css --minify
+11. buka html dan link dengan final.css
+
+WARNING!! : untuk no 10 & 11, hanya dilakukan ketika sudah final saja
+
+NOTE : 	1. apabila keluar dari vscode dan ingin melanjutkan project lagi maka harus run ulang rebuildernya.
+	2. open package.json, kemudian pada key script tambahkan perintah berikut :
+		=> "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch"
+	3. untuk run ulang rebuildernya di terminalnya cukup dengan :
+		=> npm run dev

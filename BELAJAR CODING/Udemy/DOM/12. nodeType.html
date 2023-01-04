@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodeType</title>
+</head>
+<body>
+    Ryan Agung samudra
+    <!-- Ini komentar -->
+    <h1>Ini Title</h1>
+
+    <script>
+        // nodeType ini digunakan untuk mengecek tipe node itu apa
+        const nodes = document.body.childNodes
+        for (const node of nodes) {
+            console.info(`${node} : ${node.nodeType}`)
+        }
+    </script>
+</body>
+</html>

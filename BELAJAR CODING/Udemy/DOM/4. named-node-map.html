@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Node Map</title>
+</head>
+<body>
+    <img id="bg" src="https://www.fazztrack.com/_nuxt/img/fazztrack-logo-color.cba88b7.svg" alt="background">
+
+    <script>
+        // Name node map ini merupakan kumpulan dari attribute, sama seperti nodelist yang merupakan kumpulan dari node
+
+        const bg = document.getElementById("bg")
+        const attributes = bg.attributes;
+
+        for (let attribute of attributes){
+            console.info(`${attribute.name} = ${attribute.value}`)
+        }
+    </script>
+</body>
+</html>
